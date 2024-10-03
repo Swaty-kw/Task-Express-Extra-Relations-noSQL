@@ -5,3 +5,4 @@ const studentRouter = express.Router();
 studentRouter.get("/", getAllStudents);
 
 module.exports = studentRouter;
+
