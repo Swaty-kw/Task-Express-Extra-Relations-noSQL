@@ -8,5 +8,9 @@ const getAllCourses = async (req, res, next) => {
     next(error);
   }
 };
+const createCourse = async (req, res, next) => {
+  const newCourse = await Course.create();
+  return res.status(201).json(newCourse);
+};
 
-module.exports = { getAllCourses };
+module.exports = { getAllCourses, createCourse };
